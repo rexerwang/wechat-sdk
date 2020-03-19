@@ -5,7 +5,14 @@
  * https://opensource.org/licenses/MIT
  */
 
+import Vue from 'vue'
 import { SDKManager } from './core/wechat'
+
+// Create instance
+const wechat = new SDKManager()
+
+// Inject Vue
+Vue.prototype.$wechat = wechat
 
 export default function(ctx, inject) {
   if (ctx.isServer) return
@@ -19,9 +26,6 @@ export default function(ctx, inject) {
 
   // Enable VConsole
   vconsole && SDKManager.enableVConsole()
-
-  // Create instance
-  const wechat = new SDKManager()
 
   // Inject to the context as $wechat
   ctx.$wechat = wechat
