@@ -74,6 +74,6 @@
     "rollup": "^2.0.2",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-terser": "^5.2.0",
-    "standard-version": "^7.1.0"
+    "standard-version": "^8.0.1"
   }
 }
